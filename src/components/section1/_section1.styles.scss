@@ -1,0 +1,54 @@
+@use '../../scss/variables.styles' as *;
+
+.section1 {
+    background-image: $black-linear-gradiant;
+    
+    .section_main {
+        margin-top: 93px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .section_main_title {
+            font-size: $section-title-font-size;
+            color: #fff;
+        }
+
+        .section_main_content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .section_main_content_image {
+                width: 555px;
+                height: 390px;
+                margin: 37px 0 119px;
+            }
+
+            .quote {
+                width: 100%;
+                margin: 270px 0 225px;
+                .quote_line {
+                    font-size: 65px;
+                    color: #fff;
+                    margin: 0;
+
+                    .underline {
+                        text-decoration: underline;
+                    }
+                    &:nth-child(1) {
+                        margin-left: 314px;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 843px;
+                        font-size: 94px;
+                    }
+                    &:nth-child(3) {
+                        margin-left: 1137px;
+                    }                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@use '../../../scss/variables.styles' as *;
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: solid 6px #fff;
+    .footer_logo {
+       width: 191px;
+       height: 108px;
+    }
+    
+    .footer_links {
+        .footer_link {
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            &:nth-child(2) {
+                margin: 0 105px 0 76px;
+            }
+        }
+    }
+
+    .footer_icons {
+        display: flex;
+        gap: 72px;
+
+        .footer_icon {
+            filter: $white-filter;
+            cursor: pointer;
+        }
+    }
+}

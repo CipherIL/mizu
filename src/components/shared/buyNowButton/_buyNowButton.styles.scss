@@ -1,0 +1,21 @@
+@use '../../../scss/variables.styles' as *;
+
+.buy-now-button {
+    font-size: 35px;
+    color: $light-blue;
+
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 31px;
+
+    width: 258px;
+    height: 54px;
+
+    cursor: pointer;
+    transition: font-size 150ms linear ,height 150ms linear;
+    &:hover {
+        color: #fff;
+        background: $light-blue;
+        font-size: 38px;
+    }
+}

@@ -1,0 +1,21 @@
+@import url("https://use.typekit.net/llw4mme.css");
+* {
+    font-family: futura-pt, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    display: flex;
+    flex-direction: column;    
+}
