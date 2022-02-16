@@ -11,7 +11,7 @@ const Footer = () => {
     e.preventDefault();
   }
   return (
-    <div className="footer">
+    <footer className="footer">
       <img src={mizo_logo_path} alt="mizu_logo" className="footer_logo"/>
       <div className='footer_links'>
         <a href="/" className='footer_link' onClick={handleLinkClick}>Home</a>
@@ -23,7 +23,7 @@ const Footer = () => {
         <FontAwesomeIcon icon={["fab","instagram"]} size="4x" className='footer_icon'/>
         <FontAwesomeIcon icon={["fab","facebook"]} size="4x" className='footer_icon'/>
       </div>
-    </div>
+    </footer>
   )
 }
 

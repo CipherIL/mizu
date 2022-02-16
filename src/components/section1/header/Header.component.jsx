@@ -9,7 +9,7 @@ const Header = () => {
         e.preventDefault();
     }
     return (
-        <div className='header'>
+        <header className='header'>
             <img src="/assets/pngs/logo.png" alt="mizu_logo" className='header_logo'/>
             <nav className='header_nav'>
                 <span className='header_nav_link-container'>
@@ -23,7 +23,7 @@ const Header = () => {
                 </span>                
             </nav>
             <FontAwesomeIcon icon={["fas","magnifying-glass"]} size="2x" className='header_icon'/>
-        </div>
+        </header>
     )
 }
 

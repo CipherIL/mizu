@@ -1,0 +1,40 @@
+.x-scrolling-images-container {
+    position: relative;
+    width: 1640px;
+    height: 950px;
+    margin: 0 auto 309px;
+    overflow: auto;
+    white-space: nowrap;
+
+    .x-scrolling-images {
+        display: flex;
+        width: 1600px;
+        height: 100%;
+        gap: 90px;
+        img {
+            max-width: 790px;
+            height: 100%;
+            object-fit:cover;
+            pointer-events: none;
+        }
+        
+    }
+
+    .scroll-cover {
+        position:absolute;
+        width: 1920px;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        right: -62%;
+        background-color: transparent;
+        cursor: default;
+    }
+
+    /*Hide Scrollba*/
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar { /* Chrome, Safari, Opera*/
+        display: none;
+    }
+}
