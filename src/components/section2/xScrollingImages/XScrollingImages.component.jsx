@@ -1,38 +1,26 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react';
+import ScrollingContainer from 'react-indiana-drag-scroll';
 import './xScrollingImages.styles.scss';
-const XScrollingImages = () => {
-    const [mouseXPos,setMouseXPos] = useState();
-    const scrollDiv = useRef("scrollDiv")
 
-    const scrollX = (e,xOffset) => {
-        const currScrollX = scrollDiv.current.offsetWidth;
-        const scrollXTarget = currScrollX + xOffset;
-        console.log(currScrollX,xOffset)
-        scrollDiv.current.scrollTo(scrollXTarget,0);  
-    }
-    const handleDragStart = (e) => {
-        setMouseXPos(e.clientX)
-    }
-    const handleDrag = (e) => {
-        const currMouseX = e.clientX;
-        if(currMouseX-mouseXPos !== 0) {
-          scrollX(e,(currMouseX-mouseXPos)*-1);
-          setMouseXPos(currMouseX)
+const XScrollingImages = () => {
+    const scrollDiv = useRef();
+    
+    useEffect(()=>{
+        if(scrollDiv.current) {
+            setTimeout(()=>{
+                scrollDiv.current.scrollTo(450,0);
+            },10)
         }
-    }
-    const handleDragEnd = (e) => {
-        setMouseXPos(undefined);
-    }
+    },[])
+    
     return (
-        <div className='x-scrolling-images-container' ref={scrollDiv}>
-            <div className='x-scrolling-images'>
+        <div className='x-scrolling-images-container' >
+            <ScrollingContainer className='x-scrolling-images' vertical={false} innerRef={scrollDiv}>
                 <img src="/assets/jpgs/divers_left.jpg" alt="divers_left" draggable="false" onDragStart={()=>{return false;}}/>
                 <img src="/assets/jpgs/divers_middle.jpg" alt="divers_middle" draggable="false" onDragStart={()=>{return false;}}/>
-                <img src="/assets/jpgs/divers_right.jpg" alt="divers_right" onLoad={(e)=>{scrollX(e,-820)}} draggable="false" onDragStart={()=>{return false;}}/>
-            </div>
-            <div className='scroll-cover' onDragStart={handleDragStart} onDrag={handleDrag} onDragEnd={handleDragEnd} draggable="true"></div>
-        </div>
-        
+                <img src="/assets/jpgs/divers_right.jpg" alt="divers_right" draggable="false" onDragStart={()=>{return false;}}/>
+            </ScrollingContainer>
+        </div>   
     )
 }
 
