@@ -8,14 +8,20 @@
 
     .x-scrolling-images {
         display: flex;
-        width: 1600px;
+        // width: 2460px;
         height: 100%;
         gap: 90px;
-        img {
-            max-width: 790px;
-            height: 100%;
-            object-fit:cover;
-            pointer-events: none;
+
+        .image-container {
+            height: 950px;
+            width: 760px;
+            img {
+                width: auto;
+                max-width: 760px;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
         }
         
     }
